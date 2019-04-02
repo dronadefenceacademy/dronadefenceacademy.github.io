@@ -5,10 +5,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
 
   <style>
 
-
+  .Home {
+    margin-top:-40px;
+  }
   .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
     width: 100%;
@@ -16,47 +20,52 @@
     margin: auto;
   }
 
+  .main-courses-cont {
+    margin-top:-20px;
+    background-color: black;
+    color:white;
+  }
   .container-courses {
-  margin-left:30px;
-  margin-top:20px;
-  display: inline-block;
-  position: relative;
-  width: 46%;
-}
+    margin-left:10px;
+    margin-top:20px;
+    display: inline-block;
+    position: relative;
+    width: 32.33%;
+  }
 
-.image {
-  display: block;
-  width: 100%;
-  height: 50%;
-}
+  .image {
+    display: block;
+    width: 100%;
+    height: 50%;
+  }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #008CBA;
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: .5s ease;
-}
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
 
-.container-courses:hover .overlay {
-  width: 100%;
-}
+  .container-courses:hover .overlay {
+    width: 100%;
+  }
 
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
 
   * {
     box-sizing: border-box;
@@ -171,7 +180,9 @@
 
   /* Add some shadows to create a card effect */
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow: 3px 3px 5px 6px #ccc;
   }
 
   /* Some left and right padding inside the container */
@@ -190,39 +201,91 @@
     color: grey;
   }
 
-  .button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .button:hover {
-    background-color: #555;
+  .container-success {
+    background-color:black;
+    color:white;
   }
 
 
   .alignleft {
 	float: left;
-}
-.alignright {
-	float: right;
-}
+  }
 
-  .textbox {
+  .alignright {
+  	float: right;
+  }
+
+  #textbox {
     margin-top:50px;
+    margin-bottom:50px;
+  }
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1E90FF;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 250px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    white-space:pre;
+    content: '\260e';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+  }
+
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+  .footer {
+    background: #061D25;
+    padding: 10px 0;
+  }
+  .footer a {
+    float:right;
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    transition: all .5s ease;
+  }
+
+  .footer a:hover {
+    color: white;
   }
   </style>
 </head>
 <body>
-<marquee scrollamount="3" bgcolor="#ffff66" width="100%">
-  <span style="color:black;">Demo notifs</span>
+
+<marquee scrollamount="3" bgcolor="#000000" width="100%" height="30">
+  <span style="color:white;font-size:20px;">Demo notifs</span>
 </marquee>
+
+
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -233,7 +296,7 @@
       <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
       <li><a href="#courses"><span class="glyphicon glyphicon-book"></span> Courses</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Admissions</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>
+      <li><a href="#gallery"><span class="glyphicon glyphicon-calendar"></span> Events</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Enquiry Form</a></li>
     </ul>
   </div>
@@ -278,74 +341,80 @@
   </div>
 </div>
 
-<center><h1>Courses We Offer</h1></center>
-<div class="container-courses">
-  <img src="images/army.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Army</div>
+<div class="main-courses-cont" id="courses">
+  <br/><br/>
+  <center><h1>Courses We Offer</h1></center>
+  <div class="container-courses">
+    <img src="images/army.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Army</div>
+    </div>
   </div>
-</div>
-<div class="container-courses">
-  <img src="images/navy.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Navy</div>
+  <div class="container-courses">
+    <img src="images/navy.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Navy</div>
+    </div>
   </div>
-</div>
-<div class="container-courses">
-  <img src="images/crpf.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">CRPF</div>
+  <div class="container-courses">
+    <img src="images/crpf.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">CRPF</div>
+    </div>
   </div>
-</div>
-<div class="container-courses">
-  <img src="images/airforce.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Air Force</div>
+  <div class="container-courses">
+    <img src="images/airforce.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">Air Force</div>
+    </div>
   </div>
-</div>
-<div class="container-courses">
-  <img src="images/bsf.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">BSF</div>
+  <div class="container-courses">
+    <img src="images/bsf.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">BSF</div>
+    </div>
   </div>
-</div>
-<div class="container-courses">
-  <img src="images/rpf.jpg" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">RPF</div>
+  <div class="container-courses">
+    <img src="images/rpf.jpg" alt="Avatar" class="image">
+    <div class="overlay">
+      <div class="text">RPF</div>
+    </div>
   </div>
+  <br/><br/>
+  <center><button class="button" style="vertical-align:middle"><span>Request For Callback </span></button></center>
+  <br/><br/><br/>
 </div>
 
-<div class="container">
+<div class="container" id="gallery">
   <center><h1>Gallery</h1></center>
   <div class="mySlides">
     <div class="numbertext">1 / 6</div>
-    <img src="images/c1.jpg" style="width:100%">
+    <img src="images/c1.jpg" style="width:100%;height:70%;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">2 / 6</div>
-    <img src="images/c2.jpg" style="width:100%">
+    <img src="images/c2.jpg" style="width:100%;height:70%;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">3 / 6</div>
-    <img src="images/c3.jpg" style="width:100%">
+    <img src="images/c3.jpg" style="width:100%;height:70%;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">4 / 6</div>
-    <img src="images/c1.jpg" style="width:100%">
+    <img src="images/c1.jpg" style="width:100%;height:70%;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">5 / 6</div>
-    <img src="images/c2.jpg" style="width:100%">
+    <img src="images/c2.jpg" style="width:100%;height:70%;">
   </div>
 
   <div class="mySlides">
     <div class="numbertext">6 / 6</div>
-    <img src="images/c3.jpg" style="width:100%">
+    <img src="images/c3.jpg" style="width:100%;height:70%;">
   </div>
 
   <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -357,83 +426,100 @@
 
   <div class="row">
     <div class="column">
-      <img class="demo cursor" src="images/c1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+      <img class="demo cursor" src="images/c1.jpg" style="width:100%;height:20%;" onclick="currentSlide(1)" alt="The Woods">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/c2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+      <img class="demo cursor" src="images/c2.jpg" style="width:100%;height:20%;" onclick="currentSlide(2)" alt="Cinque Terre">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/c3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+      <img class="demo cursor" src="images/c3.jpg" style="width:100%;height:20%;" onclick="currentSlide(3)" alt="Mountains and fjords">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/c1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+      <img class="demo cursor" src="images/c1.jpg" style="width:100%;height:20%;" onclick="currentSlide(4)" alt="Northern Lights">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/c2.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+      <img class="demo cursor" src="images/c2.jpg" style="width:100%;height:20%;" onclick="currentSlide(5)" alt="Nature and sunrise">
     </div>
     <div class="column">
-      <img class="demo cursor" src="images/c3.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+      <img class="demo cursor" src="images/c3.jpg" style="width:100%;height:20%;" onclick="currentSlide(6)" alt="Snowy Mountains">
     </div>
   </div>
 </div>
 
 
 
-<center><h1 class="success">Success Stories</h1></center>
+<div class="container-success">
+  <br/>
+  <center><h1 class="success">Success Stories</h1></center><br/>
 
-<div class="row1">
-  <div class="column1">
-    <div class="card">
-      <img src="images/c1.jpg" alt="Jane" style="width:100%;height:40%;">
-      <div class="container-t">
-        <h2>Jane Doe</h2>
-        <p class="title">CEO &amp; Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+  <div class="row1">
+    <div class="column1">
+      <div class="card">
+        <img src="images/c1.jpg" alt="Jane" style="width:100%;height:40%;">
+        <div class="container-t">
+          <h2>Jane Doe</h2>
+          <p class="title">CEO &amp; Founder</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="card">
+        <img src="images/c2.jpg" alt="Mike" style="width:100%;height:40%;">
+        <div class="container-t">
+          <h2>Mike Ross</h2>
+          <p class="title">Art Director</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column1">
+      <div class="card">
+        <img src="images/c3.jpg" alt="John" style="width:100%;height:40%;">
+        <div class="container-t">
+          <h2>John Doe</h2>
+          <p class="title">Designer</p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>example@example.com</p>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="column1">
-    <div class="card">
-      <img src="images/c2.jpg" alt="Mike" style="width:100%;height:40%;">
-      <div class="container-t">
-        <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="column1">
-    <div class="card">
-      <img src="images/c3.jpg" alt="John" style="width:100%;height:40%;">
-      <div class="container-t">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
-      </div>
-    </div>
-  </div>
+  <br/><br/><br/>
 </div>
 
 <div id="textbox">
-  <center><h1>About The Director</h1></center>
-  <p class="alignleft">In this example, we have an image of a headshot photo, so this text would likely<br> be about the person whom the headshot is for.
+  <center><h1>About The Director</h1></center><br/>
+  <img src="images/bsf.jpg" class="alignleftt" style="height:50%;width:40%;">
+  <p class="alignright">In this example, we have an image of a headshot photo, so this text would likely<br> be about the person whom the headshot is for.
   The text of the paragraph<br> goes here. In this example, we have an image of a headshot photo, so this<br> text would likely be about the person <br>whom the headshot is for.
   The text of the paragraph<br> goes here. In this example, we have an image of a headshot photo, so this text would likely be about the person whom <br>the headshot is for.<br>
   The text of the paragraph<br> goes here. In this example, we have an image of a headshot photo, so this text would likely be about the person whom <br>the headshot is for.<br>
   The text of the paragraph<br> goes here. In this example, we have an image of a headshot photo, so this text would likely be about the person whom <br>the headshot is for.<br>
   The text of the paragraph<br> goes here. In this example, we have an image of a headshot photo, so this text would likely be about the person whom <br>the headshot is for.
   The text of the paragraph<br> goes here. In this example, we have an image of a headsho</p>
-  <img src="images/bsf.jpg" class="alignright" style="height:50%;widthL40px;">
 </div>
 
+<div class="know-more" style="background-color:black;color:white;">
+  <center><b><span class="lead" style="font-size:40px;font-weight:20px;">Want To Know More About<br>Drona Defence Academy?<br></span></b></center>
+  <center><a href="#" style="text-decorations:none;"><button class="button" style="vertical-align:middle"><span>Request For Callback</span></button></a></center>
+  <br/><br/>
+</div>
+
+<footer class="footer">
+  <div class="container text-center">
+    <span style="float:left;color:orange;font-size:25px;">Drona Academy</span>
+    <span style="float:center;color:white;">&copy 2019. All rights reserved Drona Defence Academy.</span>
+    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+    <a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
+    <a href="https://instagra.com"><i class="fa fa-instagram"></i></a>
+  </div>
+</footer>
 
 <script>
 var slideIndex = 1;
